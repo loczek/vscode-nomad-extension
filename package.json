@@ -1,0 +1,189 @@
+{
+  "name": "vscode-nomad-extension",
+  "displayName": "Nomad Language Server",
+  "description": "A fully featured Language Server Extension for Nomad",
+  "publisher": "loczek",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.116.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Linters",
+    "Other"
+  ],
+  "galleryBanner": {
+    "color": "#06d092",
+    "theme": "dark"
+  },
+  "icon": "./nomad.png",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loczek/vscode-nomad-extension.git"
+  },
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nomad.showLanguageServerLogs",
+        "category": "Nomad",
+        "title": "Show Language Server Logs"
+      }
+    ],
+    "languages": [
+      {
+        "id": "nomad-acl",
+        "aliases": [
+          "Nomad ACL"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nomad-agent",
+        "aliases": [
+          "Nomad Agent"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nomad-volume-csi",
+        "aliases": [
+          "Nomad CSI Volume"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nomad-volume-dynamic-host",
+        "aliases": [
+          "Nomad Dynamic Host Volume"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nomad-job",
+        "aliases": [
+          "Nomad Job"
+        ],
+        "extensions": [
+          ".nomad"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nomad-namespace",
+        "aliases": [
+          "Nomad Namespace"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nomad-node-pool",
+        "aliases": [
+          "Nomad Node Pool"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nomad-resource-quota",
+        "aliases": [
+          "Nomad Resource Quota"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "nomad-variable",
+        "aliases": [
+          "Nomad Variable"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nomad-acl",
+        "scopeName": "source.hcl",
+        "path": "./syntaxes/nomad.tmGrammar.json"
+      },
+      {
+        "language": "nomad-agent",
+        "scopeName": "source.hcl",
+        "path": "./syntaxes/nomad.tmGrammar.json"
+      },
+      {
+        "language": "nomad-volume-csi",
+        "scopeName": "source.hcl",
+        "path": "./syntaxes/nomad.tmGrammar.json"
+      },
+      {
+        "language": "nomad-volume-dynamic-host",
+        "scopeName": "source.hcl",
+        "path": "./syntaxes/nomad.tmGrammar.json"
+      },
+      {
+        "language": "nomad-job",
+        "scopeName": "source.hcl",
+        "path": "./syntaxes/nomad.tmGrammar.json"
+      },
+      {
+        "language": "nomad-namespace",
+        "scopeName": "source.hcl",
+        "path": "./syntaxes/nomad.tmGrammar.json"
+      },
+      {
+        "language": "nomad-node-pool",
+        "scopeName": "source.hcl",
+        "path": "./syntaxes/nomad.tmGrammar.json"
+      },
+      {
+        "language": "nomad-resource-quota",
+        "scopeName": "source.hcl",
+        "path": "./syntaxes/nomad.tmGrammar.json"
+      },
+      {
+        "language": "nomad-variable",
+        "scopeName": "source.hcl",
+        "path": "./syntaxes/nomad.tmGrammar.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "yarn run check-types && yarn run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "yarn run check-types && yarn run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "dependencies": {
+    "tar": "^7.5.14",
+    "vscode-languageclient": "^9.0.1",
+    "which": "^6.0.1",
+    "yauzl": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.116.0",
+    "@types/which": "^3.0.4",
+    "@types/yauzl": "^2.10.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "esbuild": "^0.27.3",
+    "eslint": "^9.39.3",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1"
+  },
+  "vsce": {
+    "dependencies": true,
+    "yarn": true
+  }
+}
