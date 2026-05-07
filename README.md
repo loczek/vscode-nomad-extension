@@ -1,6 +1,6 @@
 # Nomad
 
-A [VSCode](https://code.visualstudio.com/) extension for the [nomad-ls](https://github.com/loczek/nomad-ls) language server.
+A VSCode extension for the [nomad-ls](https://github.com/loczek/nomad-ls) language server.
 
 ## Features
 
