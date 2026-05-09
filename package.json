@@ -48,14 +48,14 @@
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "nomad-volume-csi",
+        "id": "nomad-csi-volume",
         "aliases": [
           "Nomad CSI Volume"
         ],
         "configuration": "./language-configuration.json"
       },
       {
-        "id": "nomad-volume-dynamic-host",
+        "id": "nomad-dynamic-host-volume",
         "aliases": [
           "Nomad Dynamic Host Volume"
         ],
@@ -112,12 +112,12 @@
         "path": "./syntaxes/nomad.tmGrammar.json"
       },
       {
-        "language": "nomad-volume-csi",
+        "language": "nomad-csi-volume",
         "scopeName": "source.hcl",
         "path": "./syntaxes/nomad.tmGrammar.json"
       },
       {
-        "language": "nomad-volume-dynamic-host",
+        "language": "nomad-dynamic-host-volume",
         "scopeName": "source.hcl",
         "path": "./syntaxes/nomad.tmGrammar.json"
       },

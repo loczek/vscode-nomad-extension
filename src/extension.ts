@@ -49,11 +49,11 @@ export async function activate(context: ExtensionContext) {
       },
       {
         scheme: "file",
-        language: "nomad-volume-csi",
+        language: "nomad-csi-volume",
       },
       {
         scheme: "file",
-        language: "nomad-volume-dynamic-host",
+        language: "nomad-dynamic-host-volume",
       },
       {
         scheme: "file",

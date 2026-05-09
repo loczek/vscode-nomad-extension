@@ -21,8 +21,8 @@ The only default suffix is `.nomad` and it matches to `Nomad Job`, other languag
   "files.associations": {
     "*.nomad.acl": "nomad-acl",
     "**/agent/*.nomad": "nomad-agent",
-    "**/csi/*.nomad.csi": "nomad-volume-csi",
-    "**/host/*.nomad.dyn": "nomad-volume-dynamic-host",
+    "**/csi/*.nomad.csi": "nomad-csi-volume",
+    "**/host/*.nomad.dyn": "nomad-dynamic-host-volume",
     "*.nomad": "nomad-job",
     "*.nomad.ns": "nomad-namespace",
     "*.nomad.np": "nomad-node-pool",
