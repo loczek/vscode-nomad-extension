@@ -13,10 +13,6 @@
     "Linters",
     "Other"
   ],
-  "galleryBanner": {
-    "color": "#06d092",
-    "theme": "dark"
-  },
   "icon": "./nomad.png",
   "repository": {
     "type": "git",
