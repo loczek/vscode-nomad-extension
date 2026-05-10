@@ -13,6 +13,11 @@
     "Linters",
     "Other"
   ],
+  "keywords": [
+    "hashicorp",
+    "nomad",
+    "hcl"
+  ],
   "icon": "./nomad.png",
   "repository": {
     "type": "git",
