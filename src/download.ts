@@ -10,7 +10,7 @@ export async function downloadLanguageServer(context: ExtensionContext) {
   const arch = getArch(process.arch);
 
   const binaryURI = `nomad-ls_${platform}_${arch}${platform === "windows" ? ".zip" : ".tar.gz"}`;
-  const url = `https://github.com/loczek/nomad-ls/releases/latest/download/${binaryURI}`;
+  const url = `https://github.com/loczek/nomad-ls/releases/download/v0.0.7/${binaryURI}`;
   const compressed = Uri.joinPath(context.globalStorageUri, binaryURI);
 
   const response = await fetch(url);
